@@ -97,16 +97,7 @@
 		<button type="button" class="close" data-dismiss="alert">×</button>
 		<strong><?php echo $this->session->flashdata('SignupSuccess');  ?></strong>
 	 </div>	
-	<?php }
-
-	$csrf = array(
-        'name' => $this->security->get_csrf_token_name(),
-        'hash' => $this->security->get_csrf_hash()
-);
-?>
-
-
-<input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
+	<?php } ?>
 
 		<!-- <h4>Your address</h4>
 		<div class="control-group">

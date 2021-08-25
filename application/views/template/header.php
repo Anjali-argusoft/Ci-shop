@@ -83,7 +83,7 @@
 		  <div class="modal-body">
 			<form class="form-horizontal loginFrm">
 			  <div class="control-group">								
-				<input type="text" id="inputEmail" placeholder="Email">
+				<input type="text" id="inputUname" placeholder="UserName">
 			  </div>
 			  <div class="control-group">
 				<input type="password" id="inputPassword" placeholder="Password">
@@ -94,7 +94,7 @@
 				</label>
 			  </div>
 			</form>		
-			<button type="submit" class="btn btn-success">Sign in</button>
+			<button type="submit" id="ulogin" class="btn btn-success">Sign in</button>
 			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 		  </div>
 	</div>
@@ -105,3 +105,35 @@
 </div>
 </div>
 <!-- Header End====================================================================== -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+
+  $('#ulogin').click(function(event){
+
+	event.preventDefault();
+	var user_name = $('#inputUname').val();
+	var user_pswrd = $('#inputPassword').val();
+	
+	jQuery.ajax({
+		type: "POST",
+		url: "<?php echo base_url() ?>"+"login/userLogin",
+		datatype: 'json',
+		data: {
+			uname: user_name,
+			upswrd : user_pswrd 
+		},
+		success: function(res){
+			alert('success');
+		}
+		
+	});
+
+  }); 
+});
+
+
+	</script>
