@@ -27,9 +27,9 @@
 			<div class="controls">
 			  <!-- <input type="text" id="inputFname1" placeholder="Username"> -->
               <?php echo form_input(array('name' => 'uname',
-    'id' => 'inputUname',
-    'placeholder' => 'Username',
-)); ?>
+    			'id' => 'inputUname',
+    			'placeholder' => 'Username',
+				)); ?>
 			  <?php echo form_error('uname'); ?>
 
 			</div>
@@ -40,9 +40,9 @@
 			<div class="controls">
 			  <!-- <input type="text" id="inputFname1" placeholder="First Name"> -->
               <?php echo form_input(array('name' => 'fname',
-    'id' => 'inputFname',
-    'placeholder' => 'First Name',
-)); ?>
+    			'id' => 'inputFname',
+   				'placeholder' => 'First Name',
+				)); ?>
 				 <?php echo form_error('fname'); ?>
 			</div>
 		 </div>
@@ -51,9 +51,9 @@
 			<div class="controls">
 			  <!-- <input type="text" id="inputLnam" placeholder="Last Name"> -->
               <?php echo form_input(array('name' => 'lname',
-    'id' => 'inputLname',
-    'placeholder' => 'Last Name',
-)); ?>
+   				 'id' => 'inputLname',
+   				 'placeholder' => 'Last Name',
+				)); ?>
 				 <?php echo form_error('lname'); ?>
 			</div>
 		 </div>
@@ -62,9 +62,9 @@
 		<div class="controls">
 		  <!-- <input type="text" id="input_email" placeholder="Email"> -->
           <?php echo form_input(array('name' => 'email',
-    'id' => 'input_email',
-    'placeholder' => 'Email',
-)); ?>
+    		'id' => 'input_email',
+    		'placeholder' => 'Email',
+			)); ?>
 			<?php echo form_error('email'); ?>
 		</div>
 	  </div>
@@ -73,11 +73,11 @@
 		<div class="controls">
 		  <!-- <input type="password" id="inputPassword1" placeholder="Password"> -->
           <?php echo form_input(array('name' => 'pwd',
-		  'type' => 'password',
-    'id' => 'inputpassword',
-    'placeholder' => 'Password',
-)); ?>
-										<?php echo form_error('password'); ?>
+    		'type' => 'password',
+    		'id' => 'inputpassword',
+    		'placeholder' => 'Password',
+			)); ?>
+			<?php echo form_error('password'); ?>
 		</div>
 	  </div>
       <div class="control-group">
@@ -85,19 +85,19 @@
 		<div class="controls">
 		  <!-- <input type="password" id="inputPassword1" placeholder="mobile"> -->
           <?php echo form_input(array('name' => 'mobile',
-    'id' => 'inputmobile',
-    'placeholder' => 'Mobile',
-)); ?>
-										<?php echo form_error('mobile'); ?>
+    		'id' => 'inputmobile',
+    		'placeholder' => 'Mobile',
+			)); ?>
+		<?php echo form_error('mobile'); ?>
 		</div>
 	  </div>
 
-	<?php if($this->session->flashdata('SignupSuccess')){ ?>
+	<?php if ($this->session->flashdata('SignupSuccess')) {?>
 	<div class="alert alert-block alert-error fade in">
 		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong><?php echo $this->session->flashdata('SignupSuccess');  ?></strong>
-	 </div>	
-	<?php } ?>
+		<strong><?php echo $this->session->flashdata('SignupSuccess'); ?></strong>
+	 </div>
+	<?php }?>
 
 		<!-- <h4>Your address</h4>
 		<div class="control-group">
@@ -182,7 +182,7 @@
 			  <input type="text"  name="mobile" id="mobile" placeholder="Mobile Phone"/>
 			</div>
 		</div>
-		
+
 	<p><sup>*</sup>Required field	</p>
  -->
 	<div class="control-group">
